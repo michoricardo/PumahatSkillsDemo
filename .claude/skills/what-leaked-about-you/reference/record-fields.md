@@ -13,7 +13,7 @@ are often one. A corporate address in a record also dates an employment
 relationship, which is frequently more useful than the account itself.
 
 **Username.** Often the highest-value field in the row, because it is a selector
-you did not have. Feed it to `hunt-a-handle`. A username from an old breach is
+you did not have. Feed it to `platform-skill-check`. A username from an old breach is
 particularly good: it predates the subject's current opsec habits.
 
 **Display name / real name.** Self-declared at signup, unverified, and sometimes

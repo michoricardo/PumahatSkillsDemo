@@ -40,7 +40,7 @@ The metadata beats the credentials, every time:
 |---|---|
 | Which service | Membership itself. This person had an account here — a fact you can rarely establish any other way |
 | Registration date | Time-anchors the identity. Sign-up clusters across services link accounts |
-| Username in the record | A handle you did not have. Straight into `hunt-a-handle` |
+| Username in the record | A handle you did not have. Straight into `platform-skill-check` |
 | Signup or last-login IP | Coarse geolocation and, more usefully, hosting-vs-residential classification |
 | Display name, DOB, address | Identity attributes to corroborate elsewhere. Never treat as authoritative |
 | Password *pattern* | Linkage evidence, analytically. Never an input to a login form |
@@ -104,7 +104,7 @@ already hold, never something you test.
 Work the breach list as an account map. An email appearing in a gaming forum, a
 fitness app, and a regional dating service tells you three platforms to
 investigate, three registration dates, and often three usernames — each one a
-seed for `hunt-a-handle`. The services themselves characterise the person:
+seed for `platform-skill-check`. The services themselves characterise the person:
 professional, regional, linguistic, and interest signals that no profile page
 would give you.
 
@@ -157,7 +157,7 @@ confirmation, and which are blocked by a missing skill or key:
 
 | Lead | Where it goes | Status |
 |---|---|---|
-| Username in a record, or the local part of an email | `hunt-a-handle` | needs skill |
+| Username in a record, or the local part of an email | `platform-skill-check` | needs skill |
 | Other Microsoft or Google domains for the same handle | variants, `derived` | needs user confirmation |
 | Number formats for a phone | variants, `equivalent` | ready |
 | Password the user still uses | Pwned Passwords range API | ready, run it locally |
@@ -227,7 +227,7 @@ breaches. One is a large forum breach from several years back, data classes
 listed as email addresses, usernames, IP addresses, and password hashes.
 
 The username in that breach is `merce_ada`, which the client had forgotten
-using. That handle goes to `hunt-a-handle` and turns up two live accounts the
+using. That handle goes to `platform-skill-check` and turns up two live accounts the
 client did not know were still public — the most valuable output of the exercise
 and nothing to do with credentials.
 
@@ -245,7 +245,7 @@ any record is used anywhere.
 
 | New selector | Skill |
 |---|---|
-| Username recovered from a record | `hunt-a-handle` |
+| Username recovered from a record | `platform-skill-check` |
 | Additional email addresses | `what-an-email-reveals` |
 | Phone number in a record | `whose-number-is-this` |
 | Signup IP | `find-exposed-servers` |

@@ -50,23 +50,23 @@ def email_variants(addr):
                 out.append(v(f"{base}@{d}", "derived", 2, "same handle on another Microsoft domain: a different mailbox, often owned by the same person", "breach lookup"))
         out.append(v(f"{base}@" + "hotmail.es", "derived", 3, "regional Microsoft domain", "breach lookup"))
 
-    out.append(v(base, "derived", 2, "local part as a username selector", "hunt-a-handle"))
+    out.append(v(base, "derived", 2, "local part as a username selector", "platform-skill-check"))
     out.extend(username_variants(base, include_origin=False))
     return out
 
 
 def username_variants(name, include_origin=True):
     name = name.strip()
-    out = [v(name, "equivalent", 1, "as given", "hunt-a-handle")] if include_origin else []
+    out = [v(name, "equivalent", 1, "as given", "platform-skill-check")] if include_origin else []
     lowered = name.lower()
     if lowered != name:
-        out.append(v(lowered, "equivalent", 2, "lowercased", "hunt-a-handle"))
+        out.append(v(lowered, "equivalent", 2, "lowercased", "platform-skill-check"))
     for a, b in (("_", "."), ("_", "-"), ("_", ""), (".", "_"), ("-", "_"), (".", ""), ("-", "")):
         if a in lowered:
-            out.append(v(lowered.replace(a, b), "derived", 3, f"separator '{a}' -> '{b or 'none'}'", "hunt-a-handle"))
+            out.append(v(lowered.replace(a, b), "derived", 3, f"separator '{a}' -> '{b or 'none'}'", "platform-skill-check"))
     stem = re.sub(r"[\d_.\-]+$", "", lowered)
     if stem and stem != lowered:
-        out.append(v(stem, "derived", 3, "trailing digits and separators removed. Very common handles link nothing", "hunt-a-handle"))
+        out.append(v(stem, "derived", 3, "trailing digits and separators removed. Very common handles link nothing", "platform-skill-check"))
     seen, uniq = set(), []
     for item in out:
         if item["variant"] not in seen:

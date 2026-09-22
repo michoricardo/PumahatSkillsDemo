@@ -16,7 +16,7 @@ Objetivo: auditar la exposición del cliente ficticio Ada Mercer.
 
 ## Datos adicionales para la demo
 
-- Handle recuperado del registro 1: `merce_ada`. Seguiría a `hunt-a-handle`, que no está incluido en este repo.
+- Handle recuperado del registro 1: `merce_ada`. Seguiría a `platform-skill-check`, que no está incluido en este repo.
 - Contraseña de prueba para el paso de Pwned Passwords: `password123`. Es un ejemplo público y notoriamente común, no pertenece a nadie.
 
 ## Qué debería producir el skill
